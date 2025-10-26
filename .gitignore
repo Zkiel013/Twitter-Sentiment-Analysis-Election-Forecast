@@ -1,0 +1,31 @@
+# Node.js
+node_modules/
+npm-debug.log*
+.env
+
+# Logs
+logs/
+*.log
+
+# Build
+dist/
+build/
+
+# Mac/Windows OS
+.DS_Store
+Thumbs.db
+
+# IDEs/editors
+.vscode/
+.idea/
+
+# React
+client/node_modules/
+client/build/
+
+# Server
+server/node_modules/
+
+# Optional: if you have .env files in server or client
+client/.env
+server/.env
