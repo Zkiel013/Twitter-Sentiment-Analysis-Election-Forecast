@@ -25,11 +25,11 @@ model/
 
 ## Features
 
-- 📊 Sentiment Analysis of tweets from political parties
-- 🧠 Machine Learning-based prediction of election outcome
-- 💻 Interactive data visualizations
-- 🔒 Secure backend APIs using Express.js
-- 🌐 Deployed via Vercel
+-  Sentiment Analysis of tweets from political parties
+-  Machine Learning-based prediction of election outcome
+-  Interactive data visualizations
+-  Secure backend APIs using Express.js
+-  Deployed via Vercel
 
 ## Tech Stack
 
@@ -67,13 +67,16 @@ npm install
 
 ### 3. Set up environment variables
 
-Create a `.env` file inside `/server`:
+Create a `.env` file inside `/server` and  `/client` if not already:
 
-```env
+```env(server)
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 ```
-
+```env(client)
+PORT=3000
+REACT_APP_API_URL=http://localhost:5000
+```
 ### 4. Run the app
 
 ```bash
@@ -110,7 +113,3 @@ App will run on:
 3. Commit your changes
 4. Push to your branch
 5. Create a Pull Request
-
-## License
-
-© 2025 Ezekiel Tep

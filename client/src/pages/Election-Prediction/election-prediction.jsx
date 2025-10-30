@@ -24,13 +24,13 @@ const App = () => {
   };
 
   const [aggregatedData, setAggregatedData] = useState(null);
-
+  const temp = process.env.REACT_APP_API_URL || "http://localhost:5000";
   useEffect(() => {
-    fetch('http://localhost:5000/api/election_prediction')
+    fetch(`${temp}/api/election_prediction`)
       .then((res) => res.json())
       .then((data) => setAggregatedData(data))
       .catch((error) => console.error('Error fetching aggregated data:', error));
-  }, []);
+  }, [temp]);
 
   let voteData = {
     labels: ['BJP', 'Congress', 'AAP'],
