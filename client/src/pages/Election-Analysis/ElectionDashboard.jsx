@@ -45,12 +45,13 @@ const ElectionDashboard = ({ party }) => {
     partyMapping[party] || { display: party, logo: "/images/default-logo.png" };
 
   // Fetch tweet data from the backend when the 'party' prop changes
+  const temp = process.env.REACT_APP_API_URL || "http://localhost:5000";
   useEffect(() => {
     const fetchData = async () => {
       try {
         
         const response = await axios.get(
-          `http://localhost:5000/api/election_analysis/${party}`
+          `${temp}/api/election_analysis/${party}`
         );
         console.log(response.data);
         // Expecting the backend to return { success: true, data: { election_analysis: [ ... ] } }
@@ -62,7 +63,7 @@ const ElectionDashboard = ({ party }) => {
       }
     };
     fetchData();
-  }, [party]);
+  }, [party, temp]);
 
   // if (loading) return <div>Loading dashboard data...</div>;
   // if (error) return <div>Error loading dashboard data: {error.message}</div>;
