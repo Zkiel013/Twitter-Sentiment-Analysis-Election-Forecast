@@ -47,8 +47,8 @@ model/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/election-prediction.git
-cd election-prediction
+git clone https://github.com/Zkiel013/Twitter-Sentiment-Analysis-Election-Forecast.git
+cd Twitter-Sentiment-Analysis-Election-Forecast
 ```
 
 ### 2. Install dependencies
